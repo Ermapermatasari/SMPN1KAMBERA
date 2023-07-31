@@ -1,0 +1,241 @@
+/* Reset gaya default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Tampilan logo dan nama sekolah */
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .logo h1 {
+    font-size: 40px;
+    color: #333;
+    font-weight: bold;
+  }
+  /* Tampilan header dan navigasi */
+header {
+    background-color: #6790ff;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+    
+  nav ul li a:hover {
+    color: #f6f8fc;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: #9bb0c2;
+    padding: 5px;
+    z-index: 99;
+    
+    
+    
+  }
+  
+  nav ul li:hover .submenu {
+    display: block;
+    position: fixed;
+    z-index: 99;
+    
+  }
+  
+  /* Tampilan hero section */
+.hero {
+  height: 700px;
+    background-color: #ccc;
+  }
+ /* Tampilan slideshow pada halaman beranda */
+.slideshow {
+  position: relative;
+  height: 700px; /* Sesuaikan dengan tinggi gambar */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+@keyframes slideshow {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  53% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.slideshow .slide {
+  animation: slideshow 6s infinite;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 2s;
+}
+
+.slide:nth-child(3) {
+  animation-delay: 5s;
+}
+
+  /* Tampilan welcome section (prakata kepala sekolah dan moto)*/
+  .cover {
+    display: flex;
+    align-items: center; /* Menengahkan secara horizontal */
+    justify-content: center; /* Menengahkan secara vertical */
+    height: 100%;
+  }
+  
+  .lapis {
+    width: 600px;
+    padding: 20px;
+    background-color: rgb(3, 3, 3);
+    color: #fffdfd;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .lapis-box {
+    width: 100%;
+    padding: 20px;
+    border: 3px solid #333;
+  }
+  
+  /* Tampilan footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .contact {
+    text-align: center;
+  }
+  
+  .contact p {
+    margin-bottom: 5px;
+  }
+/*untuk halaman gallery */
+.gallery{
+  min-height: 100vh;
+  background:#aaa1a1;
+  padding-bottom: 100px;
+}
+
+.gallery .image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.gallery .image-container .image{
+  height:400px;
+  width: 350px;
+  overflow: hidden;
+  border:15px solid #fff;
+  box-shadow: 0 3px 5px rgba(0,0,0,.3);
+  margin: 20px;
+}
+
+.gallery .image-container .image img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.gallery .image-container .image:hover img{
+  transform: scale(1.4);
+}
+/* Halaman Visi-Misi */
+.container {
+  display: flex;
+  align-items: center; /* Menengahkan secara horizontal */
+  justify-content: center; /* Menengahkan secara vertical */
+  height: 100%;
+}
+
+.about {
+  width: 500px;
+  padding: 20px;
+  background-color: rgb(1, 6, 10);
+  color: #fffdfd;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.about-box {
+  width: 100%;
+  padding: 20px;
+  border: 3px solid #333;
+}
+/*Halaman Makna Logo */
+.bungkus {
+  display: flex;
+  align-items: center; /* Menengahkan secara horizontal */
+  justify-content: center; /* Menengahkan secara vertical */
+  height: 100%;
+}
+
+.tentang {
+  width: 800px;
+  padding: 20px;
+  background-color: rgb(1, 6, 10);
+  color: #fffdfd;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.tentang-box {
+  width: 100%;
+  padding: 20px;
+  border: 3px solid #333;
+}
+
